@@ -12,12 +12,12 @@ public class Subscription {
     @EmbeddedId
     private SubscriptionKey id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @MapsId("studentId")
     @JoinColumn(name = "student_id")
     private Student student;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @MapsId("courseId")
     @JoinColumn(name = "course_id")
     private Course course;

@@ -25,11 +25,11 @@ public class Purchase {
     @Temporal(TemporalType.TIMESTAMP)
     private Date subscriptionDate;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "student_id")
     private Student student;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "course_id")
     private Course course;
 }

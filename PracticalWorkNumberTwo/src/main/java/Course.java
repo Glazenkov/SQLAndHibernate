@@ -31,7 +31,7 @@ public class Course {
     @Column(name = "price_per_hour")
     private Float pricePerHour;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;
 
